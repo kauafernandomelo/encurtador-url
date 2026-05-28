@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Encurtador de URL</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card" aria-labelledby="page-title">
+        <p class="eyebrow">Encurtador de URL</p>
+        <h1 id="page-title">Encurte suas URLs de forma rápida e segura.</h1>
+        <p class="hero-copy">
+          Cole um link longo, gere uma versão curta e compartilhe com facilidade.
+        </p>
+
+        <form id="shorten-form" class="url-form">
+          <label for="url-input">URL original</label>
+          <div class="input-row">
+            <input
+              id="url-input"
+              name="url"
+              type="url"
+              placeholder="https://www.exemplo.com/artigo"
+              autocomplete="url"
+              required
+            />
+            <button id="submit-button" type="submit">Encurtar</button>
+          </div>
+          <p id="form-message" class="form-message" role="status"></p>
+        </form>
+
+        <section id="result-card" class="result-card" hidden>
+          <span class="result-label">Link encurtado</span>
+          <a id="short-url" class="short-url" href="#" target="_blank" rel="noreferrer"></a>
+          <div class="result-actions">
+            <button id="copy-button" type="button">Copiar link</button>
+            <a id="stats-link" href="#" target="_blank" rel="noreferrer">Ver detalhes</a>
+          </div>
+        </section>
+      </section>
+
+      <aside class="info-panel" aria-label="Tecnologias utilizadas">
+        <h2>Tecnologias utilizadas</h2>
+        <ul>
+          <li>Python</li>
+          <li>FastAPI</li>
+          <li>SQLite</li>
+          <li>SQLAlchemy</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Pytest</li>
+        </ul>
+      </aside>
+    </main>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

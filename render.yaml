@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: encurtador-url
+    env: python
+    buildCommand: pip install -e .
+    startCommand: uvicorn url_shortener.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_BASE_URL
+        value: https://encurtador-url.onrender.com
+      - key: APP_SHORT_CODE_SIZE
+        value: 7
+      - key: APP_DATABASE_URL
+        sync: false
